@@ -1,0 +1,21 @@
+/inch {72 mul} def
+
+newpath
+/xOrigin 3 inch def
+/yOrigin 3 inch def
+/radius 1 inch def
+/numberOfSides 3 def
+/angle 45 def
+/angleInc 360 numberOfSides div def
+/cosSide angle cos radius mul xOrigin add def
+/sinSide angle sin radius mul yOrigin add def
+cosSide sinSide moveto
+1 1 numberOfSides 1 add {
+  /cosSide angle cos radius mul xOrigin add def
+  /sinSide angle sin radius mul yOrigin add def
+  cosSide sinSide lineto
+  /angle angle angleInc add def
+} for
+
+closepath
+stroke

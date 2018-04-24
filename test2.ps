@@ -1,0 +1,14 @@
+/sideLength 216 def
+/xPos 360 sideLength 2.5 div sub def
+/yPos 360 sideLength 3.5 div add def
+xPos yPos moveto
+currentpoint translate
+0 1 4 {
+ sideLength 0 lineto
+ currentpoint translate
+ -144 rotate
+} for
+closepath
+stroke
+
+

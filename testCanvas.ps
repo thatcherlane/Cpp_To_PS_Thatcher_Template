@@ -1,0 +1,140 @@
+%!
+%% PAGE 1
+gsave
+newpath
+72 72 translate
+0 0 moveto
+144 0 lineto
+144 144 lineto
+0 144 lineto
+closepath
+stroke
+grestore
+
+
+/sideLength 216 def
+/xPos 288 sideLength 2.5 div sub def
+/yPos 288 sideLength 3.5 div add def
+xPos yPos moveto
+currentpoint translate
+0 1 4 {
+ sideLength 0 lineto
+ currentpoint translate
+ -144 rotate
+} for
+closepath
+stroke
+
+
+gsave
+259.200000 100.800000 translate
+90 rotate
+-259.200000 -100.800000 translate
+
+newpath
+/xOrigin 259.200000 def
+/yOrigin 100.800000 def
+/radius 72 def
+/numberOfSides 3 def
+/angle 90 def
+/angleInc 360 numberOfSides div def
+/cosSide angle cos radius mul xOrigin add def
+/sinSide angle sin radius mul yOrigin add def
+cosSide sinSide moveto
+1 1 numberOfSides 1 add {
+  /cosSide angle cos radius mul xOrigin add def
+  /sinSide angle sin radius mul yOrigin add def
+  cosSide sinSide lineto
+  /angle angle angleInc add def
+} for
+closepath
+stroke
+
+
+grestore
+showpage
+
+%%PAGE 2
+
+
+newpath
+/xOrigin 187.200000 def
+/yOrigin 388.800000 def
+/radius 72 def
+/numberOfSides 5 def
+/angle 60 def
+/angleInc 360 numberOfSides div def
+/cosSide angle cos radius mul xOrigin add def
+/sinSide angle sin radius mul yOrigin add def
+cosSide sinSide moveto
+1 1 numberOfSides 1 add {
+  /cosSide angle cos radius mul xOrigin add def
+  /sinSide angle sin radius mul yOrigin add def
+  cosSide sinSide lineto
+  /angle angle angleInc add def
+} for
+closepath
+stroke
+
+
+gsave
+newpath
+ 216 216 translate
+0 0 72.000000 0 360 arc
+closepath
+stroke
+grestore
+
+
+showpage
+
+%%PAGE 3
+
+
+newpath
+/xOrigin 115.200000 def
+/yOrigin 388.800000 def
+/radius 72 def
+/numberOfSides 4 def
+/angle 45 def
+/angleInc 360 numberOfSides div def
+/cosSide angle cos radius mul xOrigin add def
+/sinSide angle sin radius mul yOrigin add def
+cosSide sinSide moveto
+1 1 numberOfSides 1 add {
+  /cosSide angle cos radius mul xOrigin add def
+  /sinSide angle sin radius mul yOrigin add def
+  cosSide sinSide lineto
+  /angle angle angleInc add def
+} for
+closepath
+stroke
+
+
+
+gsave
+newpath
+-72 0 translate
+0 0 moveto
+144 0 lineto
+144 144 lineto
+0 144 lineto
+closepath
+stroke
+grestore
+
+
+gsave
+newpath
+-72 144 translate
+0 0 moveto
+144 0 lineto
+144 144 lineto
+0 144 lineto
+closepath
+stroke
+grestore
+
+
+
+showpage

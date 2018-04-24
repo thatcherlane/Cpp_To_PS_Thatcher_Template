@@ -1,0 +1,18 @@
+newpath
+/xOrigin 0 def
+/yOrigin 0 def
+/radius 72 def
+/numberOfSides 5 def
+/angle 0 def
+/angleInc 360 numberOfSides div def
+/cosSide angle cos radius mul xOrigin add def
+/sinSide angle sin radius mul yOrigin add def
+cosSide sinSide moveto
+1 1 numberOfSides 1 add {
+  /cosSide angle cos radius mul xOrigin add def
+  /sinSide angle sin radius mul yOrigin add def
+  cosSide sinSide lineto
+  /angle angle angleInc add def
+} for
+closepath
+stroke
